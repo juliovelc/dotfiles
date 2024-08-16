@@ -1,8 +1,11 @@
 -- leader key
 vim.g.mapleader = " "
 
--- General Keymaps 
+-- General Keymaps
 local keymap = vim.keymap -- for conciseness
+
+-- exit insert mode with keys
+keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
